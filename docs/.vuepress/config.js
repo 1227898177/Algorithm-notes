@@ -70,6 +70,15 @@ module.exports = {
             ['expandAlgorithm', '拓展算法学习'], /* /guide/fastIn.html */
           ],
           initialOpenGroupIndex: 0
+        },{
+          title: '双指针算法题',
+          path: '/file/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+          // collapsable: false,   // 可选的, 默认值是 true,
+          sidebarDepth: 2,      // 可选的, 默认值是 1
+          children: [
+            'doublePointer' /* /guide/fastIn.html */
+          ],
+          initialOpenGroupIndex: 0
         }
 
       ],
