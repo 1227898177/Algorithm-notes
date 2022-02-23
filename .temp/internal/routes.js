@@ -9,6 +9,18 @@ import GlobalLayout from "D:\\代码\\前端笔记\\vuepress\\node_modules\\@vue
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
+    name: "v-3b87372c",
+    path: "/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-3b87372c").then(next)
+    },
+  },
+  {
+    path: "/index.html",
+    redirect: "/"
+  },
+  {
     name: "v-0b474b66",
     path: "/file/",
     component: GlobalLayout,
@@ -21,6 +33,14 @@ export const routes = [
     redirect: "/file/"
   },
   {
+    name: "v-ca1b43d0",
+    path: "/file/doublePointer.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-ca1b43d0").then(next)
+    },
+  },
+  {
     name: "v-3a568956",
     path: "/file/about.html",
     component: GlobalLayout,
@@ -29,16 +49,28 @@ export const routes = [
     },
   },
   {
-    name: "v-3b87372c",
-    path: "/",
+    name: "v-5dad5fbe",
+    path: "/file/array.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-3b87372c").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-5dad5fbe").then(next)
     },
   },
   {
-    path: "/index.html",
-    redirect: "/"
+    name: "v-2e6992f4",
+    path: "/file/expandAlgorithm.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-2e6992f4").then(next)
+    },
+  },
+  {
+    name: "v-4a3ddff0",
+    path: "/file/contact.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-4a3ddff0").then(next)
+    },
   },
   {
     name: "v-0e9f7cde",
@@ -54,30 +86,6 @@ export const routes = [
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-37957ab4").then(next)
-    },
-  },
-  {
-    name: "v-5dad5fbe",
-    path: "/file/array.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-5dad5fbe").then(next)
-    },
-  },
-  {
-    name: "v-4a3ddff0",
-    path: "/file/contact.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-4a3ddff0").then(next)
-    },
-  },
-  {
-    name: "v-2e6992f4",
-    path: "/file/expandAlgorithm.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-2e6992f4").then(next)
     },
   },
   {
@@ -105,14 +113,6 @@ export const routes = [
     },
   },
   {
-    name: "v-70f3311e",
-    path: "/file/listBasics.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-70f3311e").then(next)
-    },
-  },
-  {
     name: "v-932ac284",
     path: "/file/search.html",
     component: GlobalLayout,
@@ -126,6 +126,14 @@ export const routes = [
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-192539be").then(next)
+    },
+  },
+  {
+    name: "v-70f3311e",
+    path: "/file/listBasics.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-70f3311e").then(next)
     },
   },
   {

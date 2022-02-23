@@ -161,3 +161,34 @@ var containsNearbyDuplicate = function(nums, k) {
     return false;
 };
 ```
+## 1447.最简分数
+### 算法思想
+为保证分数在（0,1）范围内，我们可以枚举分母i范围[2,n]，分子j范围[1,i]，找最简分数，采用 **欧几里得算法** 
+求出最简公约数。  
+**相减损法又称欧几里德算法** ，即求两个正整数值最大公约数的算法，它是已知最古老的算法其可追溯至公元前300年前，它的具体做法是用较大数除以较小数，再用出现的余数（第一余数）去除除数再用出现的余数（第二余数）去除第一余数，如此反复直到最后余数是0为止。
+
+### 代码
+```javascript
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
+var simplifiedFractions = function(n) {
+    let res = [];
+       const gcd = (a, b) => {
+    if (b === 0) {
+        return a;
+    }
+    return gcd(b, a % b);
+}
+    for(let i = 2; i <=n; i++){
+        for(let j = 1; j < i ; j++){
+            if( gcd(j,i) == 1 ){
+                res.push(j+"/"+i)
+            }
+        }
+    }
+
+return res
+};
+```
